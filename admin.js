@@ -7,7 +7,7 @@ function loadClients() {
     
     // Reiniciar todas las consolas a disponibles
     for (let i = 1; i <= 6; i++) {
-        document.getElementById(`console${i}`).querySelector("img").src = "img/ps5.png";
+        document.getElementById(console${i}).querySelector("img").src = "img/ps5.png";
     }
 
     clients.forEach((client, index) => {
@@ -21,7 +21,7 @@ function loadClients() {
         timeBox.innerText = client.registrationTime;
 
         const clientInfo = document.createElement("span");
-        clientInfo.innerText = `${client.name} - Máquina ${client.machine} - ${client.time} minutos`;
+        clientInfo.innerText = ${client.name} - Máquina ${client.machine} - ${client.time} minutos;
 
         const amountInput = document.createElement("input");
         amountInput.type = "number";
@@ -42,7 +42,7 @@ function loadClients() {
         clientsList.appendChild(clientContainer);
 
         // Actualizar el estado de la consola correspondiente
-        const consoleImage = document.getElementById(`console${client.machine}`).querySelector("img");
+        const consoleImage = document.getElementById(console${client.machine}).querySelector("img");
         consoleImage.src = "img/ps5.png"; // Cambiar imagen a 'no disponible'
     });
 }
@@ -65,7 +65,7 @@ function updateClock() {
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const seconds = now.getSeconds().toString().padStart(2, '0');
-    clockElement.innerText = `${hours}:${minutes}:${seconds}`;
+    clockElement.innerText = ${hours}:${minutes}:${seconds};
 }
 
 window.onload = function() {
@@ -117,4 +117,25 @@ function exportarAExcel() {
 
     // Exportar el archivo Excel
     XLSX.writeFile(workbook, "Clientes_Registrados.xlsx");
+}
+function limpiarDatos() {
+    // Confirmar con el administrador antes de limpiar los datos
+    const confirmacion = confirm("¿Estás seguro de que deseas limpiar todos los datos registrados?");
+    if (confirmacion) {
+        // Eliminar los datos de clientes del localStorage
+        localStorage.removeItem("clients");
+
+        // Limpiar la lista de clientes en la interfaz
+        document.getElementById("clientsList").innerHTML = "";
+        
+        // Restablecer la imagen de las consolas a disponible
+        for (let i = 1; i <= 6; i++) {
+            document.getElementById(console${i}).querySelector("img").src = "img/ps5.png";
+        }
+
+        // Restablecer el total a 0
+        document.getElementById("totalDisplay").innerText = "0.00";
+
+        alert("Datos limpiados exitosamente.");
+    }
 }
