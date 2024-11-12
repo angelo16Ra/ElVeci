@@ -1,0 +1,121 @@
+body {
+    background: url('img/pantalla\ gaming.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(26, 26, 26, 0.85);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 123, 255, 0.5);
+    text-align: center;
+}
+
+input, select {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFF;
+    border: 1px solid rgba(0, 123, 255, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 123, 255, 0.9);
+}
+
+.machines img {
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.machines img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+button {
+    background-color: #007BFF;
+    color: #FFF;
+    border: none;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.clock {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.client-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.time-box {
+    background-color: rgba(0, 123, 255, 0.7);
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    min-width: 70px;
+    text-align: center;
+}
+
+.client-container span {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.amount-input {
+    width: 80px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: right;
+}
+
+.ps5-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.console {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+}
+
+.console img {
+    width: 100%;
+    height: auto;
+}

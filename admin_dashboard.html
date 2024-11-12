@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script> <!-- Biblioteca para exportar a Excel -->
+</head>
+<body>
+    <div class="container">
+        <h1>ESPORT GAMING</h1>
+        
+        <div id="ps5Container" class="ps5-container">
+            <h3>Estado de las Consolas PS5</h3>
+            <div class="console" id="console1"><img src="img/ps5.png" alt="PS5 1"></div>
+            <div class="console" id="console2"><img src="img/ps5.png" alt="PS5 2"></div>
+            <div class="console" id="console3"><img src="img/ps5.png" alt="PS5 3"></div>
+            <div class="console" id="console4"><img src="img/ps5.png" alt="PS5 4"></div>
+            <div class="console" id="console5"><img src="img/ps5.png" alt="PS5 5"></div>
+            <div class="console" id="console6"><img src="img/ps5.png" alt="PS5 6"></div>
+        </div>
+        
+        <h3>Clientes Registrados</h3>
+        <div id="clock" class="clock"></div> <!-- Reloj en tiempo real -->
+        
+        <div id="clientsList">
+            <!-- Aquí se mostrarán los clientes registrados con un campo de monto -->
+        </div>
+        
+        <h3>Total a Pagar (Soles)</h3>
+        <div id="payment">
+            <button onclick="calcularTotal()">Calcular Total</button>
+            <p>Total: S/ <span id="totalDisplay">0.00</span></p> <!-- Corrige el id -->
+            <button onclick="exportarAExcel()">Exportar a Excel</button> <!-- Botón para exportar a Excel -->
+        </div>
+        
+        <button onclick="finalizarSesion()">Finalizar Sesión</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

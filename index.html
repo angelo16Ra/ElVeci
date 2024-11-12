@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cliente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro</h1>
+        <form id="clientForm">
+            <label for="fullName">Nombres y Apellidos:</label>
+            <input type="text" id="fullName" required>
+            <h3>Seleccione la máquina</h3>
+            <div class="machines">
+                <img src="img/ps5.png" alt="PS5" onclick="selectMachine(1)" id="machine1">
+                <img src="img/ps5.png" alt="PS5" onclick="selectMachine(2)" id="machine2">
+                <img src="img/ps5.png" alt="PS5" onclick="selectMachine(3)" id="machine3">
+                <img src="img/ps5.png" alt="PS5" onclick="selectMachine(1)" id="machine1">
+                <img src="img/ps5.png" alt="PS5" onclick="selectMachine(2)" id="machine2">
+                <img src="img/ps5.png" alt="PS5" onclick="selectMachine(3)" id="machine3">
+                <!-- Añadir más imágenes según sea necesario -->
+            </div>
+            
+            <label for="time">Tiempo de uso:</label>
+            <select id="time" required>
+                <option value="30">30 minutos</option>
+                <option value="60">60 minutos</option>
+                <option value="90">90 minutos</option>
+                <option value="120">120 minutos</option>
+                <option value="Libre">Libre</option>
+            </select>
+            
+            <button type="button" onclick="registerClient()">Registrarse</button>
+            <button type="button" onclick="goToAdminLogin()">Iniciar Sesión (Admin)</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
